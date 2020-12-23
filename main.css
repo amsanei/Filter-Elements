@@ -30,11 +30,18 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    background-color: black;
+    background-color: #fafafa;
 	line-height: 1;
 }
 ol, ul {
 	list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #0000ee;
+}
+a:visited{
+    color: #0000ee;
 }
 blockquote, q {
 	quotes: none;
@@ -67,4 +74,60 @@ h1.site-title{
 
 h3.site-description{
     font-size: 1.8rem;
+}
+
+.container{
+    display: flex;
+    margin: 20px auto;
+    width: 80%;
+}
+
+aside{
+    width: 20%;
+    padding: 0px 2%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+aside input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+aside ul{
+    border-bottom: 5px solid #ffe600;
+}
+aside ul li{
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 5px;
+}
+.selected{
+    border-left: 5px solid #ffe600;
+    background-color: #fff176;
+}
+aside ul li:hover{
+    border-left: 5px solid #ffe600;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+article{
+    text-align: center;
+    width: 25%;
+    margin-bottom: 10px;
+}
+article img{
+    width: 80%;
+}
+
+.byLine{
+    margin-top: 15px;
+    font-size: .8rem;
 }
