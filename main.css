@@ -113,7 +113,6 @@ aside ul li:hover{
 
 main{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     width: 80%;
 }
@@ -130,4 +129,8 @@ article img{
 .byLine{
     margin-top: 15px;
     font-size: .8rem;
+}
+
+.hide{
+    display: none;
 }
