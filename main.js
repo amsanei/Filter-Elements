@@ -2,6 +2,12 @@ var spans = document.querySelectorAll(".tags span");
 var liTags = document.querySelectorAll(".filter-list ul li");
 var selected = [];
 
+var input,value,ul,li,filterTxt;
+input = document.getElementById("searchInput");
+ul = document.querySelector(".filter-list ul");
+li = ul.getElementsByTagName("li");
+
+input.addEventListener("keyup",search);
 
 liTags.forEach((li)=>{
     li.addEventListener("click",SelectToggle)
@@ -29,4 +35,16 @@ function filter(){
             item.parentElement.parentElement.classList.add("hide");
         }
     })
+}
+
+function search() {
+    inputValue = input.value.toUpperCase();
+    for(let i=0;i<li.length;i++){
+        liTxt = li[i].innerText;
+        console.log(filterTxt);
+        if(liTxt.toUpperCase().indexOf(inputValue) > -1)
+            li[i].style.display = "";
+        else
+            li[i].style.display = "none";
+    }
 }
